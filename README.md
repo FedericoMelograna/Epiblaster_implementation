@@ -14,6 +14,6 @@ quantitative   # quantitative or case-control
 # Or, as a practicle example 
 filepath=`pwd`
 mkdir -p Example_result
-Code/iterator_on_files.sh $filepath/Example_data/ $filepath/Example_result/ $filepath/Code case-control   
+Code/iterator_on_files.sh $filepath/Example_data/ $filepath/Example_result/ $filepath/Code case_control   
 
 
