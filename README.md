@@ -2,7 +2,7 @@
 
 ## Package 
 
-The needed package
+The needed package are:
 
 ```
 library(episcan)
