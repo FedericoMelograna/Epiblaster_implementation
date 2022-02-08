@@ -8,11 +8,11 @@ cd $(downloaded_repo)
 $data_folder
 $result_folder
 $code_folder
-quantitative   # quantitative or case-control
+quantitative   # quantitative or case_control
 
 
-# Or, as a practicle example 
-filepath=`pwd`
+# Practical example
+filepath=``pwd``
 mkdir -p Example_result
 Code/iterator_on_files.sh $filepath/Example_data/ $filepath/Example_result/ $filepath/Code case_control   
 
