@@ -1,5 +1,20 @@
 # Epiblaster
- Epiblaster script implementation
+
+## Package 
+
+The needed package
+
+```
+library(episcan)
+library(dplyr)
+```
+
+That can be easily installed from the CRAN. 
+The implementation is based on a UNIX system, so it naturally adapts to the server, but need git bash or similar to run on a WINDOWS machine. It has been tested on both a windows machine with wsl.exe ( Ubuntu 20.04 LTS (GNU/Linux 4.4.0-19041-Microsoft x86_64)  )  and the server. 
+
+
+
+## Epiblaster script implementation
 
 ```
 cd $(downloaded_repo)    
@@ -27,10 +42,11 @@ Code/iterator_on_files.sh $filepath/Example_data/ $filepath/Example_result/ $fil
  -->
 
 
-# Practical example
+## Practical example
 ```
-filepath=`pwd`
+cd Epiblaster_implementation/
 
+filepath=`pwd`
 mkdir -p Example_result
 
 Code/iterator_on_files.sh $filepath/Example_data/ $filepath/Example_result/ $filepath/Code case_control   
