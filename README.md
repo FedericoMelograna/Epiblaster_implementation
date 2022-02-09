@@ -1,8 +1,8 @@
 # Epiblaster
 
-## Package 
+## Packages 
 
-The needed package are:
+The needed packages are:
 
 ```
 library(episcan)
@@ -12,6 +12,9 @@ library(dplyr)
 That can be easily installed from the CRAN. 
 The implementation is based on a UNIX system, so it naturally adapts to the server, but need git bash or similar to run on a WINDOWS machine. It has been tested on both a windows machine with wsl.exe ( Ubuntu 20.04 LTS (GNU/Linux 4.4.0-19041-Microsoft x86_64)  )  and the server. 
 
+## Data shape
+
+The data should be in a “ “ space separed file in which the outcome is in a column named “Class” and each other column is a SNP with the column name the SNP name
 
 
 ## Epiblaster script implementation
