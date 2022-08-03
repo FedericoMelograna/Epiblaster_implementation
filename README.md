@@ -55,3 +55,4 @@ mkdir -p Example_result
 Code/iterator_on_files.sh $filepath/Example_data/ $filepath/Example_result/ $filepath/Code case_control   
 ```
 
+ for el in */episcan_GLM_second_SORTED.txt ; do cp $el ../"${el%%/*}".txt; done                           

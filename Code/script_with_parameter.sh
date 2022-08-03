@@ -33,8 +33,10 @@ fi
 awk '$3 > 3.5 || $3 < -3.5' episcan_notcorrected.txt  > filter_episcan_1geno_threshold3_5.txt
 awk '$3 > 4.5 || $3 < -4.5' episcan_notcorrected.txt  > filter_episcan_1geno_threshold4_5.txt
 awk '$3 > 2.5 || $3 < -2.5' episcan_notcorrected.txt  > filter_episcan_1geno_threshold2_5.txt
+awk '$3 > 0.5 || $3 < -0.5' episcan_notcorrected.txt  > filter_episcan_1geno_threshold0_5.txt
 
 
+result_dim05=$(wc -c filter_episcan_1geno_threshold0_5.txt | awk '{print $1}')
 result_dim25=$(wc -c filter_episcan_1geno_threshold2_5.txt | awk '{print $1}')
 result_dim35=$(wc -c filter_episcan_1geno_threshold3_5.txt | awk '{print $1}')
 
@@ -46,8 +48,11 @@ if [[ "$result_dim35" -gt "500000" ]]; then
 elif [[ "$result_dim25" -gt "500000" ]]; then
  (head -n 1 filter_episcan_1geno_threshold3_5.txt && tail -n +2 filter_episcan_1geno_threshold3_5.txt | sort -g -k4,4 ) > episcan_SORTED_filt.txt  
 
+elif [[ "$result_dim05" -gt "500000" ]]; then
+ (head -n 1 filter_episcan_1geno_threshold2_5.txt && tail -n +2 filter_episcan_1geno_threshold2_5.txt | sort -g -k4,4 ) > episcan_SORTED_filt.txt   
+
 else
- (head -n 1 filter_episcan_1geno_threshold2_5.txt && tail -n +2 filter_episcan_1geno_threshold2_5.txt | sort -g -k4,4 ) > episcan_SORTED_filt.txt  
+ (head -n 1 filter_episcan_1geno_threshold0_5.txt && tail -n +2 filter_episcan_1geno_threshold0_5.txt | sort -g -k4,4 ) > episcan_SORTED_filt.txt  
 
 fi
 

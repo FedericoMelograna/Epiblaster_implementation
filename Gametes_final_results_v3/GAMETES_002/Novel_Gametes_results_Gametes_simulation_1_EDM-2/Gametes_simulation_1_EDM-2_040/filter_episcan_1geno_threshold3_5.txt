@@ -1,0 +1,1 @@
+SNP1 SNP2 Zscore ZP 
